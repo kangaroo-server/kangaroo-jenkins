@@ -7,6 +7,7 @@
  * @param artifactId The artifact ID.
  * @return An array of all published versions.
  */
+@NonCPS
 String[] call(String groupId, String artifactId) {
     def groupPath = groupId.split('.').join('/')
     def versioning = new XmlSlurper()

@@ -7,6 +7,7 @@
  * @param artifactId The artifact ID.
  * @return The latest release version, as a string.
  */
+@NonCPS
 String[] call(String groupId, String artifactId) {
     def groupPath = groupId.split('.').join('/')
 
