@@ -9,7 +9,7 @@
  */
 @NonCPS
 String[] call(String groupId, String artifactId) {
-    def groupPath = groupId.split('.').join('/')
+    def groupPath = groupId.split('\\.').join('/')
 
     return new XmlSlurper()
             .parse("https://repo.maven.apache.org/maven2/${groupPath}/${artifactId}/maven-metadata.xml")
